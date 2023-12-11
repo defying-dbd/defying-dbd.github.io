@@ -1,314 +1,137 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-    <style type="text/css">
-      @import url(https://themes.googleusercontent.com/fonts/css?kit=HqHVuPERkglPnbVN3VbVU6yOk74IAIsoEShXZ0TIP4ANuCFEnKJrDqT2hQUtT7ZA);
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roster</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
       * {
-        margin: auto;
+        margin: auto !important;
       }
-
-      ol {
-        margin: 0;
-        padding: 0;
-      }
-
-      table td,
-      table th {
-        padding: 0;
-      }
-
-      .c6 {
+      body {
         background-color: #000000;
         color: #ffffff;
-        font-weight: 500;
-        text-decoration: none;
-        vertical-align: baseline;
-        font-size: 10pt;
-        font-family: "Rubik";
-        font-style: normal;
-      }
-
-      .c0 {
-        color: #ffffff;
-        font-weight: 400;
-        text-decoration: none;
-        vertical-align: baseline;
-        font-size: 11pt;
-        font-family: "Rubik";
-        font-style: normal;
-      }
-
-      .c7 {
-        color: #ffffff;
-        font-weight: 500;
-        text-decoration: none;
-        vertical-align: baseline;
-        font-size: 24pt;
-        font-family: "Rubik";
-        font-style: normal;
-      }
-
-      .c1 {
-        color: #ffffff;
-        font-weight: 300;
-        text-decoration: none;
-        vertical-align: baseline;
-        font-size: 11pt;
-        font-family: "Rubik";
-        font-style: normal;
-      }
-
-      .c4 {
-        color: #ffffff;
-        font-weight: 600;
-        text-decoration: none;
-        vertical-align: baseline;
-        font-size: 11pt;
-        font-family: "Rubik";
-        font-style: normal;
-      }
-
-      .c8 {
-        color: #ffffff;
-        font-weight: 500;
-        text-decoration: none;
-        vertical-align: baseline;
-        font-size: 10pt;
-        font-family: "Rubik";
-        font-style: normal;
-      }
-
-      .c9 {
-        color: #ffffff;
-        font-weight: 600;
-        text-decoration: none;
-        vertical-align: baseline;
-        font-size: 12pt;
-        font-family: "Rubik";
-        font-style: normal;
-      }
-
-      .c2 {
-        padding-top: 0pt;
-        padding-bottom: 0pt;
-        line-height: 1.15;
-        orphans: 2;
-        widows: 2;
+        font-family: "Rubik", Arial, sans-serif;
         text-align: center;
       }
 
-      .c5 {
-        background-color: #000000;
+      .container {
         max-width: 468pt;
-        padding: 72pt 72pt 72pt 72pt;
+        padding: 72pt;
       }
 
-      .c3 {
-        height: 11pt;
+      .logo img {
+        width: 100%;
+        height: auto;
       }
-
-      .title {
-        padding-top: 0pt;
-        color: #000000;
-        font-size: 26pt;
-        padding-bottom: 3pt;
-        font-family: "Arial";
-        line-height: 1.15;
-        page-break-after: avoid;
-        orphans: 2;
-        widows: 2;
-        text-align: center;
+      .section {
+        margin-top: 24pt !important;
       }
-
-      .subtitle {
-        padding-top: 0pt;
-        color: #666666;
-        font-size: 15pt;
-        padding-bottom: 16pt;
-        font-family: "Arial";
-        line-height: 1.15;
-        page-break-after: avoid;
-        orphans: 2;
-        widows: 2;
-        text-align: center;
+      .roster {
+        font-weight: 500;
+        font-size: 24pt;
       }
-
-      li {
-        color: #000000;
-        font-size: 11pt;
-        font-family: "Arial";
-      }
-
-      p {
-        margin: 0;
-        color: #000000;
-        font-size: 11pt;
-        font-family: "Arial";
-      }
-
-      h1 {
-        padding-top: 20pt;
-        color: #000000;
-        font-size: 20pt;
-        padding-bottom: 6pt;
-        font-family: "Arial";
-        line-height: 1.15;
-        page-break-after: avoid;
-        orphans: 2;
-        widows: 2;
-        text-align: center;
-      }
-
-      h2 {
-        padding-top: 18pt;
-        color: #000000;
-        font-size: 16pt;
-        padding-bottom: 6pt;
-        font-family: "Arial";
-        line-height: 1.15;
-        page-break-after: avoid;
-        orphans: 2;
-        widows: 2;
-        text-align: center;
-      }
-
-      h3 {
-        padding-top: 16pt;
-        color: #434343;
-        font-size: 14pt;
-        padding-bottom: 4pt;
-        font-family: "Arial";
-        line-height: 1.15;
-        page-break-after: avoid;
-        orphans: 2;
-        widows: 2;
-        text-align: center;
-      }
-
-      h4 {
-        padding-top: 14pt;
-        color: #666666;
+      .section-title {
         font-size: 12pt;
-        padding-bottom: 4pt;
-        font-family: "Arial";
-        line-height: 1.15;
-        page-break-after: avoid;
-        orphans: 2;
-        widows: 2;
-        text-align: center;
+        font-weight: 600;
       }
-
-      h5 {
-        padding-top: 12pt;
-        color: #666666;
+      .player {
+        margin-top: 12pt !important;
+        margin-bottom: 2pt !important;
+        font-weight: 400;
         font-size: 11pt;
-        padding-bottom: 4pt;
-        font-family: "Arial";
-        line-height: 1.15;
-        page-break-after: avoid;
-        orphans: 2;
-        widows: 2;
-        text-align: center;
       }
-
-      h6 {
-        padding-top: 12pt;
-        color: #666666;
+      .player-info {
+        font-weight: 300;
         font-size: 11pt;
-        padding-bottom: 4pt;
-        font-family: "Arial";
-        line-height: 1.15;
-        page-break-after: avoid;
-        font-style: italic;
-        orphans: 2;
-        widows: 2;
-        text-align: center;
+      }
+      .side-title {
+        font-weight: 600;
+        font-size: 11pt;
+      }
+      .position-title {
+        margin-top: 1pt !important;
+        font-weight: 500;
+        font-size: 10pt;
+      }
+      .player-info span {
+        display: block;
       }
     </style>
   </head>
 
-  <body class="c5 doc-content">
-    <p class="c2">
-      <span
-        style="
-          overflow: hidden;
-          display: inline-block;
-          margin: 0px 0px;
-          border: 0px solid #000000;
-          transform: rotate(0rad) translateZ(0px);
-          -webkit-transform: rotate(0rad) translateZ(0px);
-          width: 624px;
-          height: 624px;
-        "
-        ><img
-          alt=""
-          src="images/defyinglogo.png"
-          style="
-            width: 624px;
-            height: 624px;
-            margin-left: 0px;
-            margin-top: 0px;
-            transform: rotate(0rad) translateZ(0px);
-            -webkit-transform: rotate(0rad) translateZ(0px);
-          "
-          title=""
-      /></span>
-    </p>
-    <p class="c2"><span class="c7">Roster</span></p>
-    <p class="c2 c3"><span class="c0"></span></p>
-    <p class="c2 c3"><span class="c0"></span></p>
-    <p class="c2"><span class="c9">Captain</span></p>
-    <p class="c2"><span class="c0">h</span></p>
-    <p class="c2 c3"><span class="c0"></span></p>
-    <p class="c2"><span class="c4">Survivors</span></p>
-    <p class="c2 c3"><span class="c4"></span></p>
-    <p class="c2"><span class="c6">Main</span></p>
-    <p class="c2 c3"><span class="c0"></span></p>
-    <p class="c2"><span class="c0">h</span></p>
-    <p class="c2"><span class="c1">DEF &#20008; h#9536</span></p>
-    <p class="c2"><span class="c1">EU | PC</span></p>
-    <p class="c2 c3"><span class="c0"></span></p>
-    <p class="c2"><span class="c0">Rin</span></p>
-    <p class="c2"><span class="c1">ITZ Rin#5d3d</span></p>
-    <p class="c2"><span class="c1">EU | PC </span></p>
-    <p class="c2 c3"><span class="c1"></span></p>
-    <p class="c2"><span class="c0">Usagi</span></p>
-    <p class="c2"><span class="c1">placeholder#1234</span></p>
-    <p class="c2"><span class="c1">RU | PC </span></p>
-    <p class="c2 c3"><span class="c1"></span></p>
-    <p class="c2"><span class="c0">W4nd3r</span></p>
-    <p class="c2"><span class="c1">w4nd3r&lt;3dexter#8299</span></p>
-    <p class="c2"><span class="c1">EU | PC </span></p>
-    <p class="c2 c3"><span class="c0"></span></p>
-    <p class="c2"><span class="c8">Sub</span></p>
-    <p class="c2 c3"><span class="c0"></span></p>
-    <p class="c2"><span class="c0">SkeletonOP</span></p>
-    <p class="c2"><span class="c1">skeletonop#81d9</span></p>
-    <p class="c2"><span class="c1">&nbsp;EU | PC </span></p>
-    <p class="c2 c3"><span class="c0"></span></p>
-    <p class="c2"><span class="c0">Vergin</span></p>
-    <p class="c2"><span class="c1">VERGIN#2161</span></p>
-    <p class="c2"><span class="c1">EU | PC </span></p>
-    <p class="c2 c3"><span class="c0"></span></p>
-    <p class="c2"><span class="c0">JTF</span></p>
-    <p class="c2"><span class="c1">JTF&lt;3rae#c9f2</span></p>
-    <p class="c2"><span class="c1">EU | PC</span></p>
-    <p class="c2 c3"><span class="c0"></span></p>
-    <p class="c2"><span class="c0">Edy</span></p>
-    <p class="c2"><span class="c1">Edy.#d221</span></p>
-    <p class="c2"><span class="c1">EU | PC</span></p>
-    <p class="c2 c3"><span class="c0"></span></p>
-    <p class="c2"><span class="c4">Killers</span></p>
-    <p class="c2 c3"><span class="c0"></span></p>
-    <p class="c2"><span class="c8">Main</span></p>
-    <p class="c2 c3"><span class="c0"></span></p>
-    <p class="c2"><span class="c0">Zaxtrem</span></p>
-    <p class="c2"><span class="c1">zaxtrem.aep#fadd</span></p>
-    <p class="c2"><span class="c1">EU | PC</span></p>
-    <p class="c2 c3"><span class="c0"></span></p>
-    <p class="c2"><span class="c0">Blxckout</span></p>
-    <p class="c2"><span class="c1">Blxckout#e988</span></p>
-    <p class="c2"><span class="c1">EU | PC</span></p>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="images/defyinglogo.png" alt="Defying Logo" />
+      </div>
+      <h1 class="roster">Roster</h1>
+
+      <div class="section">
+        <h2 class="section-title">Captain</h2>
+        <div class="player-info">
+          <span class="player">h</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="side-title">Survivors</h2>
+        <div class="player-info">
+          <span class="position-title">Main</span>
+          <span class="player">h</span>
+          <span class="player-info">DEF &#20008; h#9536</span>
+          <span class="player-info">EU | PC</span>
+
+          <span class="player">Rin</span>
+          <span class="player-info">ITZ Rin#5d3d</span>
+          <span class="player-info">EU | PC </span>
+
+          <span class="player">Usagi</span>
+          <span class="player-info">placeholder#1234</span>
+          <span class="player-info">RU | PC </span>
+
+          <span class="player">W4nd3r</span>
+          <span class="player-info">w4nd3r&lt;3dexter#8299</span>
+          <span class="player-info">EU | PC </span>
+        </div>
+        <h2 class="position-title" style="margin-top: 12pt !important">Sub</h2>
+        <div class="player-info">
+          <span class="player">SkeletonOP</span>
+          <span class="player-info">skeletonop#81d9</span>
+          <span class="player-info">&nbsp;EU | PC </span>
+
+          <span class="player">Vergin</span>
+          <span class="player-info">VERGIN#2161</span>
+          <span class="player-info">EU | PC </span>
+
+          <span class="player">JTF</span>
+          <span class="player-info">JTF&lt;3rae#c9f2</span>
+          <span class="player-info">EU | PC</span>
+
+          <span class="player">Edy</span>
+          <span class="player-info">Edy.#d221</span>
+          <span class="player-info">EU | PC</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="side-title">Killers</h2>
+        <div class="player-info">
+          <span class="position-title">Main</span>
+
+          <span class="player">Zaxtrem</span>
+          <span class="player-info">zaxtrem.aep#fadd</span>
+          <span class="player-info">EU | PC</span>
+
+          <span class="player">Blxckout</span>
+          <span class="player-info">Blxckout#e988</span>
+          <span class="player-info">EU | PC</span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
