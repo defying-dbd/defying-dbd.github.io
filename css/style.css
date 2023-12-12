@@ -1,8 +1,8 @@
 * {
-    margin-left: -100% !important;
-    margin-right: -100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     text-align: center !important;
-    padding: 0;
+    justify-content: center;
     box-sizing: border-box;
     transition: all 0.3s ease-in-out;
 }
