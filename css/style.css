@@ -79,18 +79,3 @@ body {
     font-weight: 500;
     font-size: 10pt;
 }
-
-@media screen and (max-width: 768px) {
-  #container {
-    width: 90%;
-    padding: 24pt;
-  }
-
-  .roster {
-    margin-top: 12em;
-  }
-
-  .player {
-    width: 100% !important;
-  }
-}
