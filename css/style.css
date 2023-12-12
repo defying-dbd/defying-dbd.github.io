@@ -3,13 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     transition: all 0.3s ease-in-out;
-    text-align: center;
+    text-align: center !important;
 }
 
 body {
     background-color: #000;
     color: #fff;
-    font-family: "Rubik", Arial, sans-serif;
+    font-family: "Rubik";
     text-align: center;
 }
 
