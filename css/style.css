@@ -1,10 +1,14 @@
 * {
-    margin: auto !important;
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 
 body {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #000;
+    color: #fff;
     font-family: "Rubik", Arial, sans-serif;
     text-align: center;
 }
@@ -13,22 +17,19 @@ body {
     position: relative;
     width: 75%;
     padding: 72pt;
-    background: url(/img/defyinglogo.png);
-    background-size: 468pt;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    transition: all 100ms ease;
-}
-
-.section {
-    margin-top: 24pt !important;
+    background: url(/img/defyinglogo.png) center/468pt no-repeat fixed;
+    transition: all 0.1s ease !important;
+    margin: auto;
 }
 
 .roster {
-    margin-top: 30em !important;
+    margin-top: 30em;
     font-weight: 500;
     font-size: 24pt;
+}
+
+.section {
+    margin-top: 24pt;
 }
 
 .section-title {
@@ -36,30 +37,45 @@ body {
     font-weight: 600;
 }
 
+.player-list span {
+    display: block;
+}
+
 .player {
-    margin-top: 12pt !important;
-    margin-bottom: 2pt !important;
+    width: 25% !important;
+    margin-bottom: 16pt !important;
     font-weight: 400;
     font-size: 11pt;
+    height: 18px !important;
+}
+
+.player:hover {
+    margin-bottom: 2pt !important;
+    height: 50% !important;
+}
+
+.player:hover>.player-info {
+    opacity: 0.75;
+    height: 18px !important;
 }
 
 .player-info {
+    height: 0px !important;
+    display: none;
     font-weight: 300;
     font-size: 11pt;
-    opacity: 0.5;
+    opacity: 0;
 }
 
 .side-title {
+    margin-top: 24pt !important;
     font-weight: 600;
     font-size: 11pt;
 }
 
 .position-title {
-    margin-top: 2pt !important;
+    margin-top: 6pt !important;
+    margin-bottom: 14pt;
     font-weight: 500;
     font-size: 10pt;
-}
-
-.player-info span {
-    display: block;
 }
