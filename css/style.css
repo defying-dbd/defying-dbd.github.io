@@ -80,13 +80,12 @@ body {
     font-size: 10pt;
 }
 
-@media only screen and (max-device-width: 1080px) {
+@media only screen and (max-device-width: 720px) {
     #container {
         width: 100% !important;
-        background-size: 100% !important;
     }
 
     .player {
-        width: 100% !important;
+        width: 50% !important;
     }
 }
