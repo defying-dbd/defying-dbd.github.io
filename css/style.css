@@ -86,6 +86,6 @@ body {
     }
 
     .player {
-        width: 50% !important;
+        width: 100% !important;
     }
 }
