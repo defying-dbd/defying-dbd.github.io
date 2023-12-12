@@ -46,6 +46,7 @@ body {
 .player-info {
     font-weight: 300;
     font-size: 11pt;
+    opacity: 0.5;
 }
 
 .side-title {
