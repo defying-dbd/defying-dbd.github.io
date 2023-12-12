@@ -1,8 +1,7 @@
 * {
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin: 0 auto;
     text-align: center !important;
-    justify-content: center;
+    padding: 0;
     box-sizing: border-box;
     transition: all 0.3s ease-in-out;
 }
@@ -79,4 +78,19 @@ body {
     margin-bottom: 14pt;
     font-weight: 500;
     font-size: 10pt;
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    width: 90%;
+    padding: 24pt;
+  }
+
+  .roster {
+    margin-top: 12em;
+  }
+
+  .player {
+    width: 100% !important;
+  }
 }
