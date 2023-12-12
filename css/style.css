@@ -9,42 +9,43 @@
 body {
     background-color: #000;
     color: #fff;
-    font-family: "Rubik";
+    font-family: "Rubik", Arial, sans-serif;
+    text-align: center;
 }
 
 #container {
     position: relative;
     width: 75%;
     padding: 72pt;
-    background: url(/img/defyinglogo.png) center/468pt no-repeat fixed;
+    background: url(../img/defyinglogo.png) center/468pt no-repeat fixed;
     transition: all 0.1s ease !important;
     margin: auto;
 }
 
 .roster {
-    margin-top: 30em !important;
-    font-weight: 500 !important;
-    font-size: 24pt !important;
+    margin-top: 30em;
+    font-weight: 500;
+    font-size: 24pt;
 }
 
 .section {
-    margin-top: 24pt !important;
+    margin-top: 24pt;
 }
 
 .section-title {
-    font-size: 12pt !important;
-    font-weight: 600 !important;
+    font-size: 12pt;
+    font-weight: 600;
 }
 
 .player-list span {
-    display: block !important;
+    display: block;
 }
 
 .player {
     width: 25% !important;
     margin-bottom: 16pt !important;
-    font-weight: 400 !important;
-    font-size: 11pt !important;
+    font-weight: 400;
+    font-size: 11pt;
     height: 18px !important;
 }
 
@@ -54,26 +55,27 @@ body {
 }
 
 .player:hover>.player-info {
-    opacity: 0.75 !important;
+    opacity: 0.75;
     height: 18px !important;
 }
 
 .player-info {
     height: 0px !important;
-    font-weight: 300 !important;
-    font-size: 11pt !important;
-    opacity: 0 !important;
+    display: none;
+    font-weight: 300;
+    font-size: 11pt;
+    opacity: 0;
 }
 
 .side-title {
     margin-top: 24pt !important;
-    font-weight: 600 !important;
-    font-size: 11pt !important;
+    font-weight: 600;
+    font-size: 11pt;
 }
 
 .position-title {
     margin-top: 6pt !important;
-    margin-bottom: 14pt !important;
-    font-weight: 500 !important;
-    font-size: 10pt !important;
+    margin-bottom: 14pt;
+    font-weight: 500;
+    font-size: 10pt;
 }
