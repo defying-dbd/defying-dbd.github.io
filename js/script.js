@@ -22,14 +22,6 @@ logoSize = function () {
     // Adjust this line to make the image disappear
     var zoomedWidth = Math.max(widthAtMax + scrollChangePx, 0);
 
-    // For small screens (e.g., max width 1080 pixels), you may want to adjust the scaling factor
-    var scaleFactor = 2.0; // Adjust this value as needed
-
-    // Apply a maximum width for mobile devices
-    if ($(window).width() <= 1080) {
-      zoomedWidth = Math.min(zoomedWidth, 1080 * scaleFactor);
-    }
-
     $(".container").css("background-size", zoomedWidth);
   });
 };
