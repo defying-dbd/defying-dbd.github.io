@@ -1,90 +1,82 @@
 * {
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 0.3s ease-in-out;
 }
-
 body {
-    background-color: #000;
-    color: #fff;
-    font-family: "Rubik", sans-serif;
-    text-align: center;
+	background-color: #000;
+	color: #fff;
+	font-family: "Rubik", sans-serif;
+	text-align: center;
 }
-
 #container {
-    position: relative;
-    width: 75%;
-    padding: 72px;
-    background: url(../img/defyinglogo.png) center/624px no-repeat fixed;
-    transition: all 0.1s ease;
-    padding-bottom: 10em !important;
+	position: relative;
+	width: 75%;
+	padding: 72px;
+	background: url(../img/defyinglogo.png) center/624px no-repeat fixed;
+	transition: all 0.1s ease;
+	padding-bottom: 10em !important;
 }
-
 .roster {
-    margin-top: 31.5em;
-    font-weight: 500;
-    font-size: 2rem;
+	margin-top: 31.5em;
+	font-weight: 500;
+	font-size: 2rem;
 }
-
 .section {
-    margin-top: 24px;
+	margin-top: 24px;
 }
-
 .section-title {
-    font-size: 1rem;
-    font-weight: 600;
+	font-size: 1rem;
+	font-weight: 600;
 }
-
 .player-list span {
-    display: block;
+	display: block;
 }
-
+#captain {
+	margin-top: 8px !important;
+}
 .player {
-    width: 25%;
-    margin-bottom: 16px;
-    font-weight: 400;
-    font-size: 0.875rem;
-    height: 18px;
+	width: 25%;
+	margin-bottom: 16px;
+	font-weight: 400;
+	font-size: 0.875rem;
+	height: 18px;
 }
-
 .player:hover {
-    margin-bottom: 2px;
-    height: 50%;
+	margin-bottom: 2px;
+	height: 50%;
 }
-
-.player:hover>.player-info {
-    opacity: 0.75;
-    height: 18px;
+.player:hover > .player-info {
+	opacity: 0.75;
+	height: 18px;
 }
-
 .player-info {
-    height: 1px;
-    display: none;
-    font-weight: 300;
-    font-size: 0.75rem;
-    opacity: 0;
+	height: 1px;
+	display: none;
+	font-weight: 300;
+	font-size: 0.75rem;
+	opacity: 0;
 }
-
 .side-title {
-    margin-top: 24px;
-    font-weight: 600;
-    font-size: 0.875rem;
+	margin-top: 24px;
+	font-weight: 600;
+	font-size: 0.875rem;
 }
-
 .position-title {
-    margin-top: 6px;
-    margin-bottom: 14px;
-    font-weight: 500;
-    font-size: 0.75rem;
+	margin-top: 6px;
+	margin-bottom: 14px;
+	font-weight: 500;
+	font-size: 0.75rem;
 }
-
+#SubSurv {
+	margin-top: 32px !important;
+}
 @media only screen and (max-width: 720px) {
-    #container {
-        width: 100%;
-    }
-
-    .player {
-        width: 100%;
-    }
+	#container {
+		width: 100%;
+	}
+	.player {
+		width: 100%;
+	}
 }
