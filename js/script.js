@@ -3,7 +3,6 @@ $(document).ready(function () {
 	var newImage = new Image();
 	newImage.src = $container.attr("src");
 	var imgWidth = newImage.width;
-
 	var maxScrollDistance = Math.min(468, $(window).height());
 	var widthAtMax = 624;
 	var widthDiff = imgWidth - widthAtMax;
