@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	transition: all 0.3s ease-in-out;
+	cursor: pointer;
 }
 
 body {
@@ -31,16 +32,16 @@ body {
 	margin-top: 24px;
 }
 
+.section span {
+	display: block;
+}
+
 .section-title {
 	font-size: 1rem;
 	font-weight: 600;
 }
 
-.player-list span {
-	display: block;
-}
-
-#captain {
+.captain {
 	margin-top: 8px !important;
 }
 
@@ -55,11 +56,11 @@ body {
 .player:hover {
 	margin-bottom: 2px;
 	height: 50%;
-	text-shadow: 0 0 4px white;
+	text-shadow: 0 0 6px white;
 }
 
 .player:hover>.player-info {
-	text-shadow: 0 0 4px lightgray;
+	text-shadow: 0 0 4px rgba(211, 211, 211, 0.75);
 }
 
 .player:hover>.player-info {
@@ -88,8 +89,12 @@ body {
 	font-size: 0.75rem;
 }
 
-#SubSurv {
+.sub-position {
 	margin-top: 32px !important;
+}
+
+.highlight {
+	text-shadow: 0 0 10px white;
 }
 
 @media only screen and (max-width: 720px) {
