@@ -16,4 +16,17 @@ $(document).ready(function () {
 			"background-size": zoomedWidth,
 		});
 	});
+
+	$(".player").hover(
+		function () {
+			$(this)
+				.closest(".section")
+				.find(".side-title, .section-title")
+				.addClass("highlight");
+			$(this).siblings(".position-title").addClass("highlight");
+		},
+		function () {
+			$(".highlight").removeClass("highlight");
+		}
+	);
 });
