@@ -12,13 +12,10 @@ $(document).ready(function () {
 			0
 		);
 	}
-	$container.on("load", function () {
-		function updateBackgroundSize() {
-			$container.css("background-size", calculateBackgroundSize() + "px");
-		}
-		$window.scroll(updateBackgroundSize).scroll();
-		$container.css("transition", "all 0.1s ease");
-	});
+	function updateBackgroundSize() {
+		$container.css("background-size", calculateBackgroundSize() + "px");
+	}
+	$window.scroll(updateBackgroundSize).scroll();
 	$(".player").click(function () {
 		$(this).toggleClass("active");
 		if ($(this).hasClass("active")) {
