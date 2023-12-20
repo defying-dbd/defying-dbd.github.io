@@ -2,6 +2,9 @@ $(document).ready(function () {
 	var imageWidth = new Image().width;
 	var $window = $(window);
 	var $container = $("#container");
+	$container.on("load", function () {
+		$container.css("transition", "all 0.1s ease");
+	});
 	function calculateBackgroundSize() {
 		return Math.max(
 			624 +
