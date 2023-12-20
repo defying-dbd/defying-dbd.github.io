@@ -1,31 +1,35 @@
 $(document).ready(function () {
-	function calculateLogoSize() {
+	var imageWidth = new Image().width;
+	var $window = $(window);
+	var $container = $("#container");
+	$window.on("load", function () {
+		$container.css("transition", "all 0.1s ease");
+	});
+	function calculateBackgroundSize() {
 		return Math.max(
 			624 +
 				Math.floor(
-					$(document).scrollTop() *
-						(new Image().width - 624 / Math.min(468, $(window).height()))
+					$window.scrollTop() *
+						(imageWidth - 624 / Math.min(468, $window.height()))
 				),
 			0
 		);
 	}
-
-	function updateLogoSize() {
-		$("#container").css("background-size", calculateLogoSize() + "px");
+	function updateBackgroundSize() {
+		$container.css("background-size", calculateBackgroundSize() + "px");
 	}
-
-	$(window).scroll(updateLogoSize);
-
+	$window.scroll(updateBackgroundSize).scroll();
 	$(".player").click(function () {
 		$(this).toggleClass("active");
-		$(".active").not($(this)).removeClass("active");
+		if ($(this).hasClass("active")) {
+			$(".active").not($(this)).removeClass("active");
+		}
 		$(this)
 			.closest(".section")
 			.find(".side-title, .section-title")
 			.toggleClass("active");
 		$(this).siblings(".position-title").toggleClass("active");
 	});
-
 	$(".player").hover(
 		function () {
 			$(this)
@@ -33,9 +37,16 @@ $(document).ready(function () {
 				.find(".side-title, .section-title")
 				.addClass("highlight");
 			$(this).siblings(".position-title").addClass("highlight");
+			$(".section, .position-title, .player")
+				.not($(this).closest(".section"))
+				.addClass("inactive");
+			$(this)
+				.removeClass("inactive")
+				.siblings(".position-title")
+				.removeClass("inactive");
 		},
 		function () {
-			$(".highlight").removeClass("highlight");
+			$(".highlight, .inactive").removeClass("highlight inactive");
 		}
 	);
 });
