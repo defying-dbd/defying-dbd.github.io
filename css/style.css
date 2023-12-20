@@ -18,7 +18,7 @@ body {
 	padding: 72px;
 	padding-bottom: 10em !important;
 	background: url(../img/defyinglogo.png) center/624px no-repeat fixed;
-	transition: all 0.1s ease;
+	transition: none;
 	overflow: hidden;
 }
 
