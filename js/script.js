@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	function calculateBackgroundSize() {
+	function calculateLogoSize() {
 		return Math.max(
 			624 +
 				Math.floor(
@@ -10,21 +10,15 @@ $(document).ready(function () {
 		);
 	}
 
-	$("#container").css({
-		"background-size": calculateBackgroundSize() + "px",
-	});
+	function updateLogoSize() {
+		$("#container").css("background-size", calculateLogoSize() + "px");
+	}
 
-	$(window).scroll(function () {
-		$("#container").css({
-			"background-size": calculateBackgroundSize() + "px",
-		});
-	});
+	$(window).scroll(updateLogoSize);
 
 	$(".player").click(function () {
 		$(this).toggleClass("active");
-		if ($(this).hasClass("active")) {
-			$(".active").not($(this)).removeClass("active");
-		}
+		$(".active").not($(this)).removeClass("active");
 		$(this)
 			.closest(".section")
 			.find(".side-title, .section-title")
@@ -39,16 +33,9 @@ $(document).ready(function () {
 				.find(".side-title, .section-title")
 				.addClass("highlight");
 			$(this).siblings(".position-title").addClass("highlight");
-			$(".section, .position-title, .player")
-				.not($(this).closest(".section"))
-				.addClass("inactive");
-			$(this)
-				.removeClass("inactive")
-				.siblings(".position-title")
-				.removeClass("inactive");
 		},
 		function () {
-			$(".highlight, .inactive").removeClass("highlight inactive");
+			$(".highlight").removeClass("highlight");
 		}
 	);
 });
