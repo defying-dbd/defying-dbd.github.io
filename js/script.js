@@ -2,7 +2,7 @@ $(document).ready(function () {
 	var imageWidth = new Image().width;
 	var $window = $(window);
 	var $container = $("#container");
-	$window.on("load", function () {
+	$container.on("load", function () {
 		$container.css("transition", "all 0.1s ease");
 	});
 	function calculateBackgroundSize() {
