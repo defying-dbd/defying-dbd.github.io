@@ -2,9 +2,6 @@ $(document).ready(function () {
 	var imageWidth = new Image().width;
 	var $window = $(window);
 	var $container = $("#container");
-	$container.on("load", function () {
-		$container.css("transition", "all 0.1s ease");
-	});
 	function calculateBackgroundSize() {
 		return Math.max(
 			624 +
@@ -15,10 +12,13 @@ $(document).ready(function () {
 			0
 		);
 	}
-	function updateBackgroundSize() {
-		$container.css("background-size", calculateBackgroundSize() + "px");
-	}
-	$window.scroll(updateBackgroundSize).scroll();
+	$container.on("load", function () {
+		function updateBackgroundSize() {
+			$container.css("background-size", calculateBackgroundSize() + "px");
+		}
+		$window.scroll(updateBackgroundSize).scroll();
+		$container.css("transition", "all 0.1s ease");
+	});
 	$(".player").click(function () {
 		$(this).toggleClass("active");
 		if ($(this).hasClass("active")) {
