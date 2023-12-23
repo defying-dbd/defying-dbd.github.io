@@ -59,12 +59,6 @@ body {
 	text-shadow: 0 0 6px white;
 }
 
-.player:hover>.player-info {
-	text-shadow: 0 0 4px rgba(211, 211, 211, 0.75);
-	opacity: 0.75;
-	height: 18px;
-}
-
 .player-info {
 	height: 7px;
 	font-weight: 300;
