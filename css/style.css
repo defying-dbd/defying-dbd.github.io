@@ -100,7 +100,3 @@ body {
 .inactive {
 	opacity: 0.5;
 }
-
-.highlight {
-	text-shadow: 0 0 10px white;
-}
