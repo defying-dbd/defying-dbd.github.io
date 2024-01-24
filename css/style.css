@@ -1,3 +1,10 @@
+@font-face {
+	font-family: 'Rubik';
+	src: url('/font/Rubik.woff2') format('woff2');
+	font-weight: 300 600;
+	font-display: swap;
+}
+
 * {
 	cursor: default;
 	transition: all 0.3s ease-in-out;
@@ -9,7 +16,7 @@
 body {
 	background-color: #000;
 	color: #fff;
-	font-family: "Rubik", sans-serif;
+	font-family: 'Rubik', sans-serif;
 	display: flex;
 }
 
@@ -17,7 +24,7 @@ body {
 	position: relative;
 	padding: 72px;
 	padding-bottom: 10em !important;
-	background: url(../img/defyinglogo.png) center/624px no-repeat fixed;
+	background: url(/img/defyinglogo.webp) center/624px no-repeat fixed;
 	transition: all 0.1s ease;
 	overflow: hidden;
 }
