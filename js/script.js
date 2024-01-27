@@ -1,49 +1,53 @@
 $(document).ready(function () {
-	var imageWidth = new Image().width;
-	var $window = $(window);
-	var $container = $("#container");
-	function calculateBackgroundSize() {
-		return Math.max(
+	var container = $(".container");
+	var classActive = "active";
+	var classHighlight = "highlight";
+	var classPosTitle = ".position-title";
+	var classSection = "section.side-section";
+	var classSideSectionTitle = ".side-title,.section-title";
+	var player = $(".player");
+
+	function updateBackground() {
+		var windowHeight = $(window).height();
+		var imageWidth = new Image().width;
+		var sizeCalc = Math.max(
 			624 +
 				Math.floor(
-					$window.scrollTop() *
-						(imageWidth - 624 / Math.min(468, $window.height()))
+					$(this).scrollTop() * (imageWidth - 624 / Math.min(468, windowHeight))
 				),
 			0
 		);
+		container.css("background-size", sizeCalc + "px");
 	}
-	function updateBackgroundSize() {
-		$container.css("background-size", calculateBackgroundSize() + "px");
-	}
-	$window.scroll(updateBackgroundSize).scroll();
-	$(".player").click(function () {
-		$(this).toggleClass("active");
-		if ($(this).hasClass("active")) {
-			$(".active").not($(this)).removeClass("active");
+
+	updateBackground();
+	$(window).scroll(function () {
+		updateBackground();
+	});
+
+	player.click(function () {
+		$(this).toggleClass(classActive);
+		if ($(this).hasClass(classActive)) {
+			$("." + classActive)
+				.not($(this))
+				.removeClass(classActive);
 		}
 		$(this)
-			.closest(".section")
-			.find(".side-title, .section-title")
-			.toggleClass("active");
-		$(this).siblings(".position-title").toggleClass("active");
+			.closest(classSection)
+			.find(classSideSectionTitle)
+			.toggleClass(classActive);
+		$(this).siblings(classPosTitle).toggleClass(classActive);
 	});
-	$(".player").hover(
+	player.hover(
 		function () {
 			$(this)
-				.closest(".section")
-				.find(".side-title, .section-title")
-				.addClass("highlight");
-			$(this).siblings(".position-title").addClass("highlight");
-			$(".section, .position-title, .player")
-				.not($(this).closest(".section"))
-				.addClass("inactive");
-			$(this)
-				.removeClass("inactive")
-				.siblings(".position-title")
-				.removeClass("inactive");
+				.closest(classSection)
+				.find(classSideSectionTitle)
+				.addClass(classHighlight);
+			$(this).siblings(classPosTitle).addClass(classHighlight);
 		},
 		function () {
-			$(".highlight, .inactive").removeClass("highlight inactive");
+			$("." + classHighlight).removeClass(classHighlight);
 		}
 	);
 });

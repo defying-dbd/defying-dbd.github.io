@@ -1,109 +1,118 @@
 @font-face {
-	font-family: 'Rubik';
-	src: url('/font/Rubik.woff2') format('woff2');
-	font-weight: 300 600;
-	font-display: swap;
+    font-family: 'Rubik';
+    src: url(/font/Rubik.woff2) format('woff2');
+    font-weight: 300 600;
+    font-display: swap;
 }
 
 * {
-	cursor: default;
-	transition: all 0.3s ease-in-out;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+    cursor: default;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease-out;
 }
 
 body {
-	background-color: #000;
-	color: #fff;
-	font-family: 'Rubik', sans-serif;
-	display: flex;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
 }
 
-#container {
-	position: relative;
-	padding: 72px;
-	padding-bottom: 10em !important;
-	background: url(/img/defyinglogo.webp) center/624px no-repeat fixed;
-	transition: all 0.1s ease;
-	overflow: hidden;
+.container {
+    position: relative;
+    padding: 88px;
+    background: url(/img/defyinglogo.webp) center/624px no-repeat fixed;
+    transition: all 0.1s;
+    overflow: hidden;
 }
 
 .roster {
-	margin-top: 31.5em;
-	font-weight: 500;
-	font-size: 2rem;
+    padding-top: 30em;
+    font-weight: 500;
+    font-size: 2rem;
 }
 
-.section {
-	margin-top: 24px;
+section {
+    margin-top: 24px;
 }
 
-.section span {
-	display: block;
+section span {
+    display: block;
 }
 
 .section-title {
-	font-size: 1rem;
-	font-weight: 600;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .captain {
-	margin-top: 8px !important;
+    margin-top: 8px;
 }
 
 .player {
-	display: inline-grid !important;
-	margin: 0 auto;
-	margin-bottom: 16px;
-	font-weight: 400;
-	font-size: 0.875rem;
-	height: 20px;
+    display: inline-grid;
+    font-weight: 400;
+    font-size: 0.875rem;
+    height: 20px;
 }
 
 .player:hover {
-	cursor: pointer;
-	text-shadow: 0 0 6px white;
+    cursor: pointer;
+    text-shadow: 0 0 6px #fff;
 }
 
 .player-info {
-	height: 7px;
-	font-weight: 300;
-	font-size: 0.75rem;
-	opacity: 0;
-	transition: all 0.3s ease-out;
+    height: 7px;
+    font-weight: 300;
+    font-size: 0.75rem;
+    opacity: 0;
 }
 
-.side-title,
-.position-title {
-	margin-top: 24px;
-	font-weight: 600;
-	font-size: 0.875rem;
+.position-title,
+.side-title {
+    margin-top: 24px;
+    font-weight: 600;
+    font-size: 0.875rem;
 }
 
 .position-title {
-	margin-top: 6px;
-	margin-bottom: 14px;
-	font-weight: 500;
-	font-size: 0.75rem;
+    margin-top: 6px;
+    margin-bottom: 14px;
+    font-weight: 500;
+    font-size: 0.75rem;
 }
 
 .sub-position {
-	margin-top: 32px !important;
+    margin-top: 48px;
 }
 
-.player:hover,
-.highlight,
-.active {
-	text-shadow: 0 0 10px white;
+.active,
+.highlight {
+    text-shadow: 0 0 6px #fff;
 }
 
 .active>.player-info {
-	text-shadow: 0 0 5px rgba(211, 211, 211, 0.75);
-	opacity: 0.75;
-	height: 18px;
+    text-shadow: 0 0 5px rgba(211, 211, 211, 0.75);
+    opacity: 0.75;
+    height: 18px;
 }
 
-.inactive {
-	opacity: 0.5;
+.container:has(.player:hover)>section:not(:hover, .roster, .active, .highlight, .player-info, .player),
+section:is(:has(.sub-position .player:hover) .main-position, :has(.main-position .player:hover) .sub-position) :is(.position-title, .player) {
+    opacity: 0.375
+}
+
+@media all and (min-width:1024px) {
+    .container {
+        font-size: 0;
+        padding: 88px;
+    }
+}
+
+@media all and (max-width:959px) {
+    .container {
+        padding: 64px;
+    }
 }

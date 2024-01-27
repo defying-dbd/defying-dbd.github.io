@@ -1,17 +1,17 @@
 {
-  "name": "Team Defying",
-  "short_name": "Defying",
-  "description": "Team Defying's Player Roster",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#5D3FD3",
-  "icons": [
-    {
-      "src": "/img/defyinglogo.webp",
-      "sizes": "1024x1024",
-      "type": "image/webp"
-    }
-  ],
-  "splash_pages": null
+	"name": "Team Defying",
+	"short_name": "Defying",
+	"description": "Team Defying's Player Roster",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#000000",
+	"theme_color": "#5D3FD3",
+	"icons": [
+		{
+			"src": "/img/defyinglogo.webp",
+			"sizes": "1024x1024",
+			"type": "image/webp"
+		}
+	],
+	"splash_pages": null
 }
